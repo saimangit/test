@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.configuration.FeignConfiguration;
+import com.inventoryservice.controller.FeignConfiguration;
+import com.inventoryservice.controller.StockProducts;
 
-import com.example.model.Product;
-import com.example.model.StockProducts;
+
+
+
 
 //"http://localhost:8000"
 

@@ -24,11 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.StockClient;
-import com.example.exception.ProductNotFoundException;
-import com.example.model.Product;
-import com.example.model.RawStock;
-import com.example.service.ProductService;
+import com.test.stockservice.controller.ProductNotFoundException;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

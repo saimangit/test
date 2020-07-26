@@ -9,9 +9,6 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.entity.Product;
-import com.example.entity.RawStock;
-import com.example.repo.ProductRepo;
 
 @Service
 public class ProductService {

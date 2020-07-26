@@ -14,13 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import com.example.demo.InventoryClient;
-import com.example.exception.OrderNotFoundException;
-import com.example.model.Order;
-import com.example.model.Product;
-import com.example.repository.SalesRepository;
-import com.example.service.SalesService;
+import com.test.stockservice.controller.ProductNotFoundException;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -52,11 +46,11 @@ public class SalesController {
 	
 	@RequestMapping(value = "/sales/view/{key}",method = RequestMethod.GET)
     @ApiOperation(value = "get an order by key")
-    public ResponseEntity<Optional<Order>> getOrder(@PathVariable String key) throws OrderNotFoundException {
+    public ResponseEntity<Optional<Order>> getOrder(@PathVariable String key) throws ProductNotFoundException {
     	
 		Optional<Order> raw= salesService.getOrderByKey(key);
         if(!raw.isPresent()) {
-     	   throw new OrderNotFoundException("order not found for the key:"+key);
+     	   throw new ProductNotFoundException("order not found for the key:"+key);
         }
         
         return ResponseEntity.ok().body(raw);

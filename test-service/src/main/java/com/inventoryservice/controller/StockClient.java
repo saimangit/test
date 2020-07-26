@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.configuration.FeignConfiguration;
-import com.example.entity.RawStock;
-import com.example.entity.Stock;
+
 
 import feign.hystrix.FallbackFactory;
 
